@@ -1,0 +1,28 @@
+<header>
+    <div class="d-flex align-items-center" (click)="changeLang(lang)">
+      <img width="27px" src="../assets/imgs/english.svg" alt="">
+      <p class="m-0 mx-2 p-0">English</p>
+    </div>
+    <img width="180px" src="../assets/imgs/logo.svg" alt="">
+  </header>
+  
+  <h3 class="header-title"> معلومات موعد الفحص </h3>
+  
+  <section class="info-box rtl">
+    <h4 class="info-box--header"> معلومات الحجز </h4>
+    <div class="info-box--block"><span class="label"> مركز الخدمة</span>
+      <div class="value"><img src="assets/imgs/Livello.svg"><span
+         class="value--data"> {{details.centerAr}}</span><br><img
+         src="assets/imgs/Livello.svg" style="visibility: hidden"><span
+          class="value--data">  {{details.centerAr}}</span></div>
+    </div>
+    <div class="info-box--block"><span class="label"> موعد الخدمة</span>
+      <div class="value"><img src="assets/imgs/calendar-alt.svg"><span
+         class="value--data">  {{details.date | date:'longDate' }}</span><br><img
+          src="assets/imgs/clock.svg"><span class="value--data"> {{details.time }}</span></div>
+    </div>
+    <div class="info-box--block"><span class="label"> بيانات المركبة</span>
+      <div class="value"><img src="assets/imgs/note.svg" width="18"><span
+         class="value--data"> رقم اللوحة : {{details.carNumber }}</span></div>
+    </div>
+  </section>
